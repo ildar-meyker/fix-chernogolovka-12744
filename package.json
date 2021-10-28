@@ -1,8 +1,8 @@
 {
-  "name": "project-name",
+  "name": "fix-chernogolovka-12744",
   "repository": {
     "type" : "git",
-    "url" : ""
+    "url" : "https://github.com/ildar-meyker/fix-chernogolovka-12744.git"
   },
   "version": "0.0.1",
   "description": "",

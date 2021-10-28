@@ -1,0 +1,89 @@
+.nav-lang {
+	position: absolute;
+	right: 0;
+	font-size: calc(min(15vw, 60px));
+
+	&:hover {
+		.nav-lang__body {
+			transform: translateY(0);
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&__button {
+		width: 1em;
+		height: 1em;
+		background: #4f6f2b;
+		border: 1px solid #fff;
+		border-radius: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+
+		&__icon {
+			width: 0.5em;
+			height: 0.5em;
+			background: url(../images/earth.svg) no-repeat 50% 50%;
+			background-size: cover;
+		}
+	}
+
+	&__body {
+		transition: all 0.2s;
+		transform: translateY(0.2em);
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		padding-top: 13/60 + em;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&__list {
+		position: relative;
+
+		&:before {
+			content: " ";
+			width: 10/60 + em;
+			height: 10/60 + em;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+			background: #fff;
+		}
+	}
+
+	&__item {
+		transition: all 0.2s;
+		display: block;
+		padding: 0.8em 0;
+		text-align: center;
+		text-decoration: none;
+		font-size: 16/60 + em;
+		font-weight: 700;
+		background: #4f6f2b;
+		border: 1px solid #fff;
+		border-width: 0 1px 1px 0;
+		color: #fff;
+
+		&:first-child {
+			border-radius: 4px 4px 0 0;
+			border-width: 1px 1px 0 1px;
+		}
+
+		&:last-child {
+			border-radius: 0 0 4px 4px;
+			border-width: 0 1px 1px 1px;
+		}
+
+		&.active,
+		&:hover {
+			background: #fff;
+			color: #4f6f2b;
+		}
+	}
+}
